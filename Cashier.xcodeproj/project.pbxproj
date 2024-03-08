@@ -21,6 +21,12 @@
 		399E42722B99F8CC00BA059A /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E42712B99F8CC00BA059A /* RegisterView.swift */; };
 		399E42742B99FA8300BA059A /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E42732B99FA8300BA059A /* WelcomeViewModel.swift */; };
 		399E42762B99FB3D00BA059A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E42752B99FB3D00BA059A /* RegisterViewModel.swift */; };
+		39D87ECF2B9AFC1F00FF621B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D87ECE2B9AFC1F00FF621B /* HomeViewController.swift */; };
+		39D87ED12B9AFD7200FF621B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D87ED02B9AFD7200FF621B /* HomeView.swift */; };
+		39D87ED72B9AFEFC00FF621B /* HomeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D87ED62B9AFEFC00FF621B /* HomeItemView.swift */; };
+		39D87EDE2B9B043C00FF621B /* SettingsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D87EDD2B9B043C00FF621B /* SettingsItemView.swift */; };
+		39D87EE12B9B272700FF621B /* AddPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D87EE02B9B272700FF621B /* AddPaymentView.swift */; };
+		39D87EE32B9B527A00FF621B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D87EE22B9B527A00FF621B /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		399E42712B99F8CC00BA059A /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		399E42732B99FA8300BA059A /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		399E42752B99FB3D00BA059A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		39D87ECE2B9AFC1F00FF621B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		39D87ED02B9AFD7200FF621B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		39D87ED62B9AFEFC00FF621B /* HomeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemView.swift; sourceTree = "<group>"; };
+		39D87EDD2B9B043C00FF621B /* SettingsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemView.swift; sourceTree = "<group>"; };
+		39D87EE02B9B272700FF621B /* AddPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentView.swift; sourceTree = "<group>"; };
+		39D87EE22B9B527A00FF621B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				399E425D2B99DB7600BA059A /* Welcome */,
-				399E425F2B99DB8100BA059A /* Login */,
 				399E426D2B99F88700BA059A /* Register */,
 				399E425E2B99DB7900BA059A /* Home */,
 			);
@@ -141,21 +152,13 @@
 		399E425E2B99DB7900BA059A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				39D87EDF2B9B271200FF621B /* Modals */,
+				39D87ED22B9AFE5800FF621B /* TabBarItems */,
 				399E426B2B99DBC900BA059A /* Model */,
 				399E426A2B99DBC500BA059A /* View */,
 				399E42692B99DBBE00BA059A /* ViewModel */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		399E425F2B99DB8100BA059A /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				399E42682B99DBB600BA059A /* Model */,
-				399E42672B99DBB200BA059A /* View */,
-				399E42662B99DBAB00BA059A /* ViewModel */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		399E42602B99DB8C00BA059A /* Model */ = {
@@ -181,30 +184,10 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		399E42662B99DBAB00BA059A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		399E42672B99DBB200BA059A /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		399E42682B99DBB600BA059A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		399E42692B99DBBE00BA059A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				39D87ECE2B9AFC1F00FF621B /* HomeViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -212,6 +195,7 @@
 		399E426A2B99DBC500BA059A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				39D87ED02B9AFD7200FF621B /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,6 +245,72 @@
 				399E42752B99FB3D00BA059A /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		39D87ED22B9AFE5800FF621B /* TabBarItems */ = {
+			isa = PBXGroup;
+			children = (
+				39D87EDA2B9AFF8300FF621B /* SettingsItem */,
+				39D87ED32B9AFE6300FF621B /* HomeItem */,
+			);
+			path = TabBarItems;
+			sourceTree = "<group>";
+		};
+		39D87ED32B9AFE6300FF621B /* HomeItem */ = {
+			isa = PBXGroup;
+			children = (
+				39D87ED82B9AFF4300FF621B /* View */,
+				39D87ED92B9AFF4900FF621B /* ViewModel */,
+			);
+			path = HomeItem;
+			sourceTree = "<group>";
+		};
+		39D87ED82B9AFF4300FF621B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				39D87ED62B9AFEFC00FF621B /* HomeItemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39D87ED92B9AFF4900FF621B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		39D87EDA2B9AFF8300FF621B /* SettingsItem */ = {
+			isa = PBXGroup;
+			children = (
+				39D87EDB2B9AFF8A00FF621B /* View */,
+				39D87EDC2B9AFF9200FF621B /* ViewModel */,
+			);
+			path = SettingsItem;
+			sourceTree = "<group>";
+		};
+		39D87EDB2B9AFF8A00FF621B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				39D87EDD2B9B043C00FF621B /* SettingsItemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39D87EDC2B9AFF9200FF621B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				39D87EE22B9B527A00FF621B /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		39D87EDF2B9B271200FF621B /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				39D87EE02B9B272700FF621B /* AddPaymentView.swift */,
+			);
+			path = Modals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,11 +395,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				399E42492B99DB1800BA059A /* WelcomeView.swift in Sources */,
+				39D87ED72B9AFEFC00FF621B /* HomeItemView.swift in Sources */,
 				399E42742B99FA8300BA059A /* WelcomeViewModel.swift in Sources */,
+				39D87ED12B9AFD7200FF621B /* HomeView.swift in Sources */,
+				39D87ECF2B9AFC1F00FF621B /* HomeViewController.swift in Sources */,
+				39D87EDE2B9B043C00FF621B /* SettingsItemView.swift in Sources */,
+				39D87EE12B9B272700FF621B /* AddPaymentView.swift in Sources */,
 				399E42722B99F8CC00BA059A /* RegisterView.swift in Sources */,
 				399E42762B99FB3D00BA059A /* RegisterViewModel.swift in Sources */,
 				399E42452B99DB1800BA059A /* AppDelegate.swift in Sources */,
 				399E42472B99DB1800BA059A /* SceneDelegate.swift in Sources */,
+				39D87EE32B9B527A00FF621B /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

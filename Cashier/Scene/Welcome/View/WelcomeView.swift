@@ -8,7 +8,7 @@
 import UIKit
 
 class WelcomeView: UIViewController {
-
+    
     @IBOutlet weak var titleLabel: UINavigationItem!
     @IBOutlet weak var title2Label: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
@@ -21,14 +21,51 @@ class WelcomeView: UIViewController {
         super.viewDidLoad()
         setupButtonUI()
         setupTextFieldsUI()
+        setupBindings()
+        setViewIdentifier()
     }
-
+    
     @IBAction func loginButtonTapped(_ sender: Any) {
-        print("deneme")
+        guard let email = emailTxtField.text, !email.isEmpty,
+              let password = passwordTxtField.text, !password.isEmpty else {
+            makeAlert(title:"Error", message: "Email or/and password cannot null.")
+            return
+        }
+        viewModel.email = email
+        viewModel.password = password
+        viewModel.loginUser()
     }
     
     @IBAction func toRegisterButton(_ sender: Any) {
         viewModel.toRegisterView(toWhere: "toRegisterView")
+    }
+    
+    
+    func setViewIdentifier(){
+        viewModel.navigateToScreen = { [weak self] screenIdentifier in
+            DispatchQueue.main.async {
+                self?.performSegue(withIdentifier: screenIdentifier, sender: nil)
+            }
+        }
+    }
+    func setupBindings(){
+        viewModel.onLoginSuccess = { [weak self] in
+            DispatchQueue.main.async {
+                self?.navigateToHomeView()
+            }
+        }
+        viewModel.onLoginFailure = { [weak self] error in
+            DispatchQueue.main.async {
+                self?.makeAlert(title: "Error", message: error.localizedDescription)
+            }
+        }
+    }
+    
+    func navigateToHomeView() {
+        if let homeTabBarController = storyboard?.instantiateViewController(withIdentifier: "HomeView") as? UITabBarController {
+               homeTabBarController.modalPresentationStyle = .fullScreen
+               present(homeTabBarController, animated: true, completion: nil)
+           }
     }
     
     func setupButtonUI() {
@@ -37,17 +74,22 @@ class WelcomeView: UIViewController {
     }
     func setupTextFieldsUI(){
         let textFields = [emailTxtField, passwordTxtField]
-            
-            for textField in textFields {
-                textField?.layer.cornerRadius = 10
-                textField?.layer.masksToBounds = true
-                textField?.layer.borderWidth = 1.0
-                textField?.layer.borderColor = UIColor.lightGray.cgColor
-                textField?.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField?.frame.height ?? 0))
-                textField?.leftViewMode = .always
-                textField?.translatesAutoresizingMaskIntoConstraints = false
-                        textField?.heightAnchor.constraint(equalToConstant: 50).isActive = true
-            }
+        
+        for textField in textFields {
+            textField?.layer.cornerRadius = 10
+            textField?.layer.masksToBounds = true
+            textField?.layer.borderWidth = 1.0
+            textField?.layer.borderColor = UIColor.lightGray.cgColor
+            textField?.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField?.frame.height ?? 0))
+            textField?.leftViewMode = .always
+            textField?.translatesAutoresizingMaskIntoConstraints = false
+            textField?.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        }
+    }
+    func makeAlert(title: String, message: String, actionTitle: String = "OK") {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: actionTitle, style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

@@ -5,6 +5,13 @@
 //  Created by yekta on 7.03.2024.
 //
 
+//if let navigationController = self.navigationController {
+//    var viewControllers = navigationController.viewControllers
+//    // Giriş ekranını yığından çıkarmak için
+//    viewControllers.remove(at: viewControllers.count - 2) // Giriş ekranını çıkar
+//    navigationController.setViewControllers(viewControllers, animated: true)
+//}
+
 import UIKit
 import Firebase
 class RegisterView: UIViewController {
@@ -28,7 +35,7 @@ class RegisterView: UIViewController {
         guard let email = emailTxtField.text, !email.isEmpty,
               let password = passwordTxtField.text, !password.isEmpty,
               let passwordAgain = passwordAgainTxtField.text, !passwordAgain.isEmpty else {
-            print("Email, password or password again cannot be null.")
+            makeAlert(title: "Error", message: "Email, password or password again cannot be null.")
             return
         }
         
@@ -63,4 +70,9 @@ class RegisterView: UIViewController {
             textField?.heightAnchor.constraint(equalToConstant: 50).isActive = true
         }
     }
+    func makeAlert(title: String, message: String, actionTitle: String = "OK") {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: actionTitle, style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
 }
