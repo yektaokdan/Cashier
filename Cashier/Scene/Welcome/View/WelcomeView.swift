@@ -63,9 +63,9 @@ class WelcomeView: UIViewController {
     
     func navigateToHomeView() {
         if let homeTabBarController = storyboard?.instantiateViewController(withIdentifier: "HomeView") as? UITabBarController {
-               homeTabBarController.modalPresentationStyle = .fullScreen
-               present(homeTabBarController, animated: true, completion: nil)
-           }
+            homeTabBarController.modalPresentationStyle = .fullScreen
+            present(homeTabBarController, animated: true, completion: nil)
+        }
     }
     
     func setupButtonUI() {
@@ -79,11 +79,16 @@ class WelcomeView: UIViewController {
             textField?.layer.cornerRadius = 10
             textField?.layer.masksToBounds = true
             textField?.layer.borderWidth = 1.0
-            textField?.layer.borderColor = UIColor.lightGray.cgColor
+            textField?.layer.borderColor = UIColor(named: "TextFieldsBack")?.cgColor
             textField?.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField?.frame.height ?? 0))
             textField?.leftViewMode = .always
             textField?.translatesAutoresizingMaskIntoConstraints = false
             textField?.heightAnchor.constraint(equalToConstant: 50).isActive = true
+            textField?.backgroundColor = .textFieldsBack
+            if let placeholder = textField?.placeholder, let placeholderColor = UIColor(named: "PlaceholderColor") {
+                textField?.attributedPlaceholder = NSAttributedString(string: placeholder,
+                                                                      attributes: [NSAttributedString.Key.foregroundColor: placeholderColor])
+            }
         }
     }
     func makeAlert(title: String, message: String, actionTitle: String = "OK") {

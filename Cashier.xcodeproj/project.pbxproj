@@ -27,6 +27,9 @@
 		39D87EDE2B9B043C00FF621B /* SettingsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D87EDD2B9B043C00FF621B /* SettingsItemView.swift */; };
 		39D87EE12B9B272700FF621B /* AddPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D87EE02B9B272700FF621B /* AddPaymentView.swift */; };
 		39D87EE32B9B527A00FF621B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D87EE22B9B527A00FF621B /* SettingsViewModel.swift */; };
+		39F077922B9EE0180065F51C /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F077912B9EE0180065F51C /* Payment.swift */; };
+		39F077942B9EE03E0065F51C /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F077932B9EE03E0065F51C /* PaymentViewModel.swift */; };
+		39F077962B9EF6120065F51C /* HomeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F077952B9EF6120065F51C /* HomeItemViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		39D87EDD2B9B043C00FF621B /* SettingsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemView.swift; sourceTree = "<group>"; };
 		39D87EE02B9B272700FF621B /* AddPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentView.swift; sourceTree = "<group>"; };
 		39D87EE22B9B527A00FF621B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		39F077912B9EE0180065F51C /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		39F077932B9EE03E0065F51C /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		39F077952B9EF6120065F51C /* HomeItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +282,7 @@
 		39D87ED92B9AFF4900FF621B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				39F077952B9EF6120065F51C /* HomeItemViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -308,9 +315,43 @@
 		39D87EDF2B9B271200FF621B /* Modals */ = {
 			isa = PBXGroup;
 			children = (
-				39D87EE02B9B272700FF621B /* AddPaymentView.swift */,
+				39F0778D2B9EDFF40065F51C /* AddPayment */,
 			);
 			path = Modals;
+			sourceTree = "<group>";
+		};
+		39F0778D2B9EDFF40065F51C /* AddPayment */ = {
+			isa = PBXGroup;
+			children = (
+				39F077902B9EE0040065F51C /* ViewModel */,
+				39F0778F2B9EE0010065F51C /* Model */,
+				39F0778E2B9EDFFF0065F51C /* View */,
+			);
+			path = AddPayment;
+			sourceTree = "<group>";
+		};
+		39F0778E2B9EDFFF0065F51C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				39D87EE02B9B272700FF621B /* AddPaymentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39F0778F2B9EE0010065F51C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39F077912B9EE0180065F51C /* Payment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39F077902B9EE0040065F51C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				39F077932B9EE03E0065F51C /* PaymentViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,9 +440,12 @@
 				399E42742B99FA8300BA059A /* WelcomeViewModel.swift in Sources */,
 				39D87ED12B9AFD7200FF621B /* HomeView.swift in Sources */,
 				39D87ECF2B9AFC1F00FF621B /* HomeViewController.swift in Sources */,
+				39F077962B9EF6120065F51C /* HomeItemViewModel.swift in Sources */,
+				39F077942B9EE03E0065F51C /* PaymentViewModel.swift in Sources */,
 				39D87EDE2B9B043C00FF621B /* SettingsItemView.swift in Sources */,
 				39D87EE12B9B272700FF621B /* AddPaymentView.swift in Sources */,
 				399E42722B99F8CC00BA059A /* RegisterView.swift in Sources */,
+				39F077922B9EE0180065F51C /* Payment.swift in Sources */,
 				399E42762B99FB3D00BA059A /* RegisterViewModel.swift in Sources */,
 				399E42452B99DB1800BA059A /* AppDelegate.swift in Sources */,
 				399E42472B99DB1800BA059A /* SceneDelegate.swift in Sources */,
