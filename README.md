@@ -1,4 +1,4 @@
-![alt text](https://github.com/yektaokdan/Cashier/blob/image_for_readme/mockup.png?raw=true)
+![alt text](https://github.com/yektaokdan/Cashier/blob/main/image_for_readme/mockup.png?raw=true)
 
 # Cashier
 
