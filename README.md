@@ -1,3 +1,5 @@
+![alt text](https://github.com/yektaokdan/Cashier/blob/image_for_readme/mockup.png?raw=true)
+
 # Cashier
 
 Cashier is a personal finance management app designed to help users track their income and expenses effortlessly. Built with Swift, MVVM and utilizing Firebase for backend operations, Cashier offers a seamless experience for managing your finances on the go.
@@ -25,5 +27,5 @@ To run Cashier on your local machine, follow these steps:
 ```bash
 git clone https://github.com/yektaokdan/Cashier.git
 
-![alt text](https://github.com/yektaokdan/Cashier/blob/image_for_readme/mockup.png?raw=true)
+
 
