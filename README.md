@@ -24,3 +24,6 @@ To run Cashier on your local machine, follow these steps:
 1. Clone the repository:
 ```bash
 git clone https://github.com/yektaokdan/Cashier.git
+
+![alt text](https://github.com/yektaokdan/Cashier/blob/image_for_readme/mockup.png?raw=true)
+
